@@ -19,10 +19,3 @@ def fetch_and_save(name, url):
 def fetch_bootstrap():
     return fetch_and_save("bootstrap", ENDPOINTS["bootstrap"])
 
-def fetch_fixtures():
-    return fetch_and_save("fixtures", ENDPOINTS["fixtures"])
-
-def fetch_player_history(player_id: int):
-    url = f"https://fantasy.premierleague.com/api/element-summary/{player_id}/"
-    return fetch_and_save(f"player_{player_id}", url)
-
